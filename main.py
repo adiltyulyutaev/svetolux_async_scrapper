@@ -113,10 +113,11 @@ async def parse(pages, session):
                         count_all+=1
                         if len(product_id) > 0:
                             count_existed+=1
-                            pr_id = list(product_id[0])[0]
-                            update_regular_price(price, pr_id)
-                            update_price(price, pr_id)
-                            print(product_id, title, count_existed, count_all)
+                            for pr_id in product_id:
+                                id_pr = list(pr_id)[0]
+                                update_regular_price(price, id_pr)
+                                update_price(price, id_pr)
+                                print(id_pr, title, count_existed, count_all)
                         else:
                             # print('id not found', title, count_all)
                             continue
