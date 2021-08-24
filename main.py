@@ -12,7 +12,7 @@ count_all = 0
 count_existed = 0
 
 def get_product_id(product_title):
-    select_query = '''select ID from wpd98_posts where post_title = '{product_title}'  and post_type = 'product' '''.format(product_title=product_title)
+    select_query = '''select фывфывID from wpd98_posts where post_title = '{product_title}'  and post_type = 'product' '''.format(product_title=product_title)
     cursor = CONNECT.cursor()
     try:
         cursor.execute(select_query)
@@ -29,7 +29,7 @@ def update_regular_price(price, product_id):
     select_query = '''
     UPDATE
 
-        wpd98_postmeta
+        wpd98_postmetaqwerasd
 
     SET
 
@@ -53,7 +53,7 @@ def update_price(price, product_id):
     select_query = '''
     UPDATE
 
-        wpd98_postmeta
+        wpd98_postmetaasdasd
 
     SET
 
@@ -61,7 +61,7 @@ def update_price(price, product_id):
 
     WHERE
 
-        meta_key = '_price'
+        meta_key_qweq = '_price'
     and
         post_id = {product_id};'''.format(price=price, product_id=product_id)
     cursor = CONNECT.cursor()
