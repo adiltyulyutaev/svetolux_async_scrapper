@@ -6,7 +6,7 @@ from mysql.connector import connect
 
 
 
-CONNECT = connect(host='185.113.134.81', user='lighthome_kz_655df', password='3K1q7E9u', database='lighthome_kz')
+CONNECT = connect()
 
 count_all = 0
 count_existed = 0
